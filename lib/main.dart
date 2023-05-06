@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_playground/double_number_state.dart';
 
 void main() {
   runApp(const MyApp());
@@ -51,6 +52,11 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            Text(
+              "your click number * 2 = ${_counter * 2}",
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
+            DoubleNumber()
           ],
         ),
       ),
