@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_playground/double_number_item.dart';
 
 class DoubleCounterPage extends StatefulWidget {
+  const DoubleCounterPage({super.key});
+
   @override
   State<DoubleCounterPage> createState() => _DoubleCounterPageState();
 }
@@ -17,24 +20,26 @@ class _DoubleCounterPageState extends State<DoubleCounterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-            Text(
-              "your click number * 2 = ${_counter * 2}",
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-            DoubleNumber()
-          ],
-        ),
+      body: ListView(
+        padding: const EdgeInsets.all(8.0),
+        itemExtent: 100.1,
+        children: const <DoubleNumberItem>[
+          DoubleNumberItem(),
+          DoubleNumberItem(),
+          DoubleNumberItem(),
+          DoubleNumberItem(),
+          DoubleNumberItem(),
+          DoubleNumberItem(),
+          DoubleNumberItem(),
+          DoubleNumberItem(),
+          DoubleNumberItem(),
+          DoubleNumberItem(),
+          DoubleNumberItem(),
+          DoubleNumberItem(),
+          DoubleNumberItem(),
+          DoubleNumberItem(),
+          DoubleNumberItem(),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
