@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_playground/double_number_page.dart';
 
 class HomeBottomNavigationBar extends StatefulWidget {
   const HomeBottomNavigationBar({super.key});
@@ -12,16 +13,17 @@ class _BottomNavigationBarState extends State<HomeBottomNavigationBar> {
 
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text(
+  static final List<Widget> _widgetOptions = <Widget>[
+    DoubleCounterPage(),
+    const Text(
       'Index0: home',
       style: optionStyle,
     ),
-    Text(
+    const Text(
       'Index1: bussiness',
       style: optionStyle,
     ),
-    Text(
+    const Text(
       'Index2: school',
       style: optionStyle,
     ),
