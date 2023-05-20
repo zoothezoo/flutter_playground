@@ -7,7 +7,9 @@ class DoubleNumberItem extends StatefulWidget {
   State<StatefulWidget> createState() => _DoubleNumberItemState();
 }
 
-class _DoubleNumberItemState extends State<DoubleNumberItem> {
+class _DoubleNumberItemState extends State<DoubleNumberItem>
+    with AutomaticKeepAliveClientMixin {
+
   final TextEditingController _controller = TextEditingController();
   int _result = 0;
 
@@ -44,4 +46,7 @@ class _DoubleNumberItemState extends State<DoubleNumberItem> {
       Text('x2 equal $_result', textAlign: TextAlign.center),
     ]));
   }
+  
+  @override
+  bool get wantKeepAlive => true;
 }
